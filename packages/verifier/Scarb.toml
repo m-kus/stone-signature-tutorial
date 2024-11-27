@@ -1,0 +1,7 @@
+[package]
+name = "zkstark_signature_verifier"
+version = "0.1.0"
+edition = "2024_07"
+
+[dependencies]
+integrity = { version = "2.0.0", default-features = false, features = ["recursive_with_poseidon", "blake2s", "monolith"] }
