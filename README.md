@@ -100,7 +100,7 @@ Use the faucet https://blastapi.io/faucets/starknet-sepolia-eth for sending toke
 Once the balance is not zero we can deploy the account:
 
 ```sh
-sncast account deploy -fee-token eth
+sncast account deploy --fee-token eth
 ```
 
 ### Verify proof on Starknet

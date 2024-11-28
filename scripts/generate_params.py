@@ -8,9 +8,9 @@ def generate_params(fri_step_list) -> str:
     return {
         "field": "PrimeField0",
         "channel_hash": "poseidon3",
-        "commitment_hash": "blake256_masked248_lsb",
-        "n_verifier_friendly_commitment_layers": 10,
-        "pow_hash": "blake256",
+        "commitment_hash": "keccak256_masked160_lsb",
+        "n_verifier_friendly_commitment_layers": 1000,
+        "pow_hash": "keccak256",
         "statement": {
             "page_hash": "pedersen"
         },

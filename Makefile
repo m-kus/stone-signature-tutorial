@@ -21,9 +21,9 @@ calldata:
 	mkdir ./target/calldata
 	# see https://github.com/HerodotusDev/integrity/blob/main/deployed_contracts.md
 	echo "0x16409cfef9b6c3e6002133b61c59d09484594b37b8e4daef7dcba5495a0ef1a" > ./target/calldata/contract_address
-	swiftness --proof target/proof.json --layout recursive_with_poseidon --hasher blake2s_248_lsb --stone-version stone6 --out target/calldata
+	swiftness --proof target/proof.json --layout recursive_with_poseidon --hasher keccak_160_lsb --stone-version stone6 --out target/calldata
 
 register-fact:
 	JOB_ID=$$((RANDOM % 10000 + 1)); \
 	echo "Job $$JOB_ID"; \
-	./scripts/register_fact.sh $$JOB_ID recursive_with_poseidon blake2s_248_lsb stone6 cairo1
+	./scripts/register_fact.sh $$JOB_ID recursive_with_poseidon keccak_160_lsb stone6 cairo1
