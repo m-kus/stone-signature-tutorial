@@ -1,0 +1,27 @@
+{
+  "trace_path": "/Users/michaelzaikin/zkstark-signature-tutorial/target/trace",
+  "memory_path": "/Users/michaelzaikin/zkstark-signature-tutorial/target/memory",
+  "pedersen": [],
+  "range_check": [],
+  "bitwise": [],
+  "poseidon": [
+    {
+      "index": 0,
+      "input_s0": "0x2a",
+      "input_s1": "0x1",
+      "input_s2": "0x0"
+    },
+    {
+      "index": 1,
+      "input_s0": "0x1",
+      "input_s1": "0x2",
+      "input_s2": "0x0"
+    },
+    {
+      "index": 2,
+      "input_s0": "0x522a43f0effbda456fb5267b6b812399d8538138772c6da2a39a6d7cb51613a",
+      "input_s1": "0x30188b2ab9bcafc80db426b059c38c5baa137e419c7a3b1153cb10b01b3f75d",
+      "input_s2": "0x5b4b44dafd97da227b9ffdbe3e9d869c9cb9a990099b810c218b6ccb4971945"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"8s82k3khtvtkg","package_name":"verifier_contract","contract_name":"SigVerifier","module_path":"verifier_contract::SigVerifier","artifacts":{"sierra":"verifier_contract_SigVerifier.contract_class.json","casm":null}}]}
