@@ -24,6 +24,6 @@ calldata:
 	swiftness --proof target/proof.json --layout recursive_with_poseidon --hasher blake2s_248_lsb --stone-version stone6 --out target/calldata
 
 register-fact:
-	export JOB_ID=$((RANDOM % 10000 + 1))
-	echo "JOB ID: $(JOB_ID)"
-	./scripts/register_fact.sh $(JOB_ID) recursive_with_poseidon blake2s_248_lsb stone6 cairo1
+	JOB_ID=$$((RANDOM % 10000 + 1)); \
+	echo "Job $$JOB_ID"; \
+	./scripts/register_fact.sh $$JOB_ID recursive_with_poseidon blake2s_248_lsb stone6 cairo1

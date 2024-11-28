@@ -1,7 +1,6 @@
-[package]
-name = "zkstark_signature"
-version = "0.1.0"
-edition = "2024_07"
+[workspace]
+members = ["packages/*"]
 
 [cairo]
+# https://github.com/lambdaclass/cairo-vm/issues/1745
 enable-gas = false

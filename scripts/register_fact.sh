@@ -33,7 +33,7 @@ send_transaction() {
             --wait \
             invoke \
             --fee-token eth \
-            --contract-address "$(<calldata/contract_address)" \
+            --contract-address "$(<target/calldata/contract_address)" \
             --function "$1" \
             --calldata "$3 $(<$2)"
 
@@ -56,11 +56,11 @@ send_transaction() {
 
 echo ""
 echo "Sending verify_proof_initial"
-send_transaction "verify_proof_initial" "calldata/initial" "$job_id $layout $hasher $stone_version $memory_verification"
+send_transaction "verify_proof_initial" "target/calldata/initial" "$job_id $layout $hasher $stone_version $memory_verification"
 
 i=1
 while true; do
-    filename="calldata/step${i}"
+    filename="target/calldata/step${i}"
 
     if [[ -e "$filename" ]]; then
         echo ""
@@ -75,4 +75,4 @@ done
 
 echo ""
 echo "Sending verify_proof_final_and_register_fact"
-send_transaction "verify_proof_final_and_register_fact" "calldata/final" "$job_id"
+send_transaction "verify_proof_final_and_register_fact" "target/calldata/final" "$job_id"
