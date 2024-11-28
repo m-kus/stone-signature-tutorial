@@ -71,7 +71,13 @@ make artifacts
 ### Generate proof
 
 ```
-make proof
+make prove
+```
+
+We can check that the proof is correct (locally):
+
+```
+make verify
 ```
 
 ### Serialize and split proof
@@ -102,3 +108,7 @@ sncast account deploy -fee-token eth
 ```
 make register-fact
 ```
+
+## Notes
+
+### Privacy
