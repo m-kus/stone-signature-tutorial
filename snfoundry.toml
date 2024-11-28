@@ -1,0 +1,3 @@
+[sncast.default]
+account = "test"
+url = "https://starknet-sepolia.public.blastapi.io/rpc/v0_7"

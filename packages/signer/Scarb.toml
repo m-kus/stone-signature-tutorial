@@ -1,0 +1,7 @@
+[package]
+name = "zkstark_signature"
+version = "0.1.0"
+edition = "2024_07"
+
+[cairo]
+enable-gas = false
