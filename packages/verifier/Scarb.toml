@@ -1,7 +1,17 @@
 [package]
-name = "zkstark_signature_verifier"
+name = "verifier_contract"
 version = "0.1.0"
 edition = "2024_07"
 
 [dependencies]
-integrity = { version = "2.0.0", default-features = false, features = ["recursive_with_poseidon", "blake2s", "monolith"] }
+starknet = "2.8.4"
+integrity = "2.0.0"
+
+[dev-dependencies]
+snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry", tag = "v0.30.0" }
+
+[[target.starknet-contract]]
+sierra = true
+
+[scripts]
+test = "snforge test"

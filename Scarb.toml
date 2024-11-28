@@ -1,6 +1,8 @@
 [workspace]
 members = ["packages/*"]
 
-[cairo]
+[profile.cairo1-run.cairo]
 # https://github.com/lambdaclass/cairo-vm/issues/1745
 enable-gas = false
+# https://github.com/software-mansion/scarb/blob/4d91be7a7dbfeb24327e3ba21c62fbac43a2105a/scarb/src/compiler/compilers/lib.rs#L154
+sierra-replace-ids = true
