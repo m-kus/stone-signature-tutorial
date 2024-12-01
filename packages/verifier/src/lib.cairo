@@ -26,8 +26,11 @@ mod SigVerifier {
         fn is_signature_valid(
             self: @ContractState, program_hash: felt252, public_key: felt252, message_hash: felt252
         ) -> bool {
-            // Note that we prepended two felts to the output: this is serde encoding for array
-            let output = [0x0, 0x2, public_key, message_hash].span();
+            // Note that we prepended and appended some felts to the output:
+            //   - prefix is the serde encoding of the output array
+            //   - suffix is the program input that is concatenated with the output
+            //     (cairo1-run issue, see notes on privacy in the README)
+            let output = [0x0, 0x2, public_key, message_hash, 0x4, 0x2a, 0x1, 0x2, 0x3].span();
             let fact_hash = calculate_fact_hash(
                 program_hash, output,
             );
@@ -41,7 +44,7 @@ mod SigVerifier {
             let integrity = Integrity::new().with_config(config, SECURITY_BITS);
             integrity.is_fact_hash_valid(fact_hash)
         }
-    }
+    }   
 }
 
 #[cfg(test)]
